@@ -87,6 +87,17 @@
         
         footer { text-align: center; padding: 40px 20px; color: #666; font-size: 0.9rem; }
         footer a { color: #8b5cf6; text-decoration: none; }
+        
+        .education { margin-top: 40px; }
+        .education h2 { color: #fff; font-size: 1.5rem; margin-bottom: 20px; text-align: center; }
+        .edu-grid { display: grid; gap: 16px; }
+        .edu-card { background: #1a1a1a; border-radius: 12px; padding: 20px; border: 1px solid #333; }
+        .edu-card h3 { color: #8b5cf6; margin-bottom: 12px; font-size: 1.1rem; }
+        .edu-card p { color: #aaa; line-height: 1.6; font-size: 0.95rem; }
+        .edu-card ul { color: #aaa; padding-left: 20px; margin-top: 10px; }
+        .edu-card li { margin-bottom: 6px; }
+        .tip { background: #166534; color: #86efac; padding: 12px 16px; border-radius: 8px; margin-top: 12px; font-size: 0.9rem; }
+        .warning { background: #991b1b; color: #fca5a5; padding: 12px 16px; border-radius: 8px; margin-top: 12px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -149,6 +160,75 @@
         <div class="suggestions" id="suggestions" style="display: none;">
             <h3>💡 Suggestions</h3>
             <ul id="suggestionList"></ul>
+        </div>
+        
+        <div class="education">
+            <h2>📚 Learn About Password Security</h2>
+            <div class="edu-grid">
+                <div class="edu-card">
+                    <h3>🔢 What is Entropy?</h3>
+                    <p>Entropy measures password randomness in "bits." Higher entropy = harder to guess. Each bit doubles the crack time.</p>
+                    <ul>
+                        <li>40 bits: Crackable in seconds</li>
+                        <li>60 bits: Crackable in years</li>
+                        <li>80+ bits: Essentially uncrackable</li>
+                    </ul>
+                    <div class="tip">💡 Rule of thumb: Every extra character adds ~6 bits of entropy.</div>
+                </div>
+                
+                <div class="edu-card">
+                    <h3>🎯 What Makes a Password Strong?</h3>
+                    <p><strong>Length beats complexity.</strong> A 20-character phrase is stronger than an 8-character scramble.</p>
+                    <ul>
+                        <li><strong>Length:</strong> 12+ characters minimum</li>
+                        <li><strong>Mix:</strong> Upper, lower, numbers, symbols</li>
+                        <li><strong>Unpredictable:</strong> Avoid dictionary words</li>
+                        <li><strong>Unique:</strong> Never reuse passwords</li>
+                    </ul>
+                </div>
+                
+                <div class="edu-card">
+                    <h3>⚠️ What Makes a Password Weak?</h3>
+                    <ul>
+                        <li>Common words ("password", "123456")</li>
+                        <li>Personal info (birthdays, names)</li>
+                        <li>Short passwords</li>
+                        <li>Patterns (qwerty, abc123)</li>
+                        <li>Reused across sites</li>
+                    </ul>
+                    <div class="warning">⚠️ "Trent123" takes less than 1 second to crack!</div>
+                </div>
+                
+                <div class="edu-card">
+                    <h3>🔐 How Attackers Crack Passwords</h3>
+                    <p><strong>Brute Force:</strong> Tries every combination. Fast for short passwords.</p>
+                    <p><strong>Dictionary Attack:</strong> Tries common words, names, passwords.</p>
+                    <p><strong>Rainbow Tables:</strong> Pre-computed hashes for fast lookup.</p>
+                    <p><strong>Credential Stuffing:</strong> Uses leaked passwords from one site on other sites.</p>
+                    <div class="tip">💡 Use a password manager + unique passwords for every site.</div>
+                </div>
+                
+                <div class="edu-card">
+                    <h3>🛡️ Best Practices</h3>
+                    <ul>
+                        <li><strong>Use a password manager</strong> (Bitwarden, 1Password)</li>
+                        <li><strong>Enable 2FA</strong> wherever possible</li>
+                        <li><strong>Use passphrases:</strong> "correct horse battery staple"</li>
+                        <li><strong>Check HaveIBeenPwned</strong> regularly</li>
+                        <li><strong>Don't share passwords</strong> via text/email</li>
+                    </ul>
+                </div>
+                
+                <div class="edu-card">
+                    <h3>📊 Understanding Crack Times</h3>
+                    <p>We calculate crack time assuming a <strong>modern GPU rig</strong> doing 10 billion guesses/second (realistic for MD5). Real times may vary:</p>
+                    <ul>
+                        <li><strong>Fast hash (MD5):</strong> Years cracked in seconds</li>
+                        <li><strong>Slow hash (bcrypt):</strong> 10,000x slower</li>
+                        <li><strong>Online attack:</strong> Limited by network (very slow)</li>
+                    </ul>
+                </div>
+            </div>
         </div>
         
         <footer>
