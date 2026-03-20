@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+html = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -440,8 +441,7 @@
 
             var response = await fetch('https://api.pwnedpasswords.com/range/' + prefix);
             var text = await response.text();
-            var lines = text.split('
-');
+            var lines = text.split('\n');
             var found = 0;
             for (var i = 0; i < lines.length; i++) {
                 var parts = lines[i].split(':');
@@ -470,4 +470,6 @@
 })();
 </script>
 </body>
-</html>
+</html>"""
+with open("index.html", "w") as f:
+    f.write(html)
