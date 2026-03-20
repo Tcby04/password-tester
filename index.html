@@ -84,16 +84,7 @@
         .breach-result.error{background:var(--surface-raised);border:1px solid var(--border);color:var(--text-muted)}
         .breach-result svg{flex-shrink:0;margin-top:1px}
         
-        .pro-upsell{background:linear-gradient(135deg,oklch(20% .014 165),oklch(18% .012 165));border:1px solid oklch(28% .014 165);border-radius:20px;padding:26px 30px;margin-bottom:20px;position:relative;overflow:hidden}
-        .pro-upsell::before{content:"";position:absolute;top:-50px;right:-50px;width:180px;height:180px;background:radial-gradient(circle,oklch(70% .14 165 / .09),transparent 70%);pointer-events:none}
-        .pro-label{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:oklch(11% 0 0);border-radius:100px;padding:4px 12px;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
-        .pro-upsell h2{font-family:var(--font-h);font-size:1.3rem;font-weight:700;margin-bottom:8px}
-        .pro-upsell>p{font-size:.88rem;color:var(--text-muted);margin-bottom:14px}
-        .pro-features{list-style:none;margin-bottom:18px;display:flex;flex-direction:column;gap:7px}
-        .pro-features li{display:flex;align-items:center;gap:9px;font-size:.86rem;color:var(--text-muted)}
-        .pro-features li svg{color:var(--accent);flex-shrink:0}
-        .pro-cta{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:oklch(11% 0 0);border:none;border-radius:12px;padding:13px 26px;font-family:var(--font-b);font-weight:600;font-size:.95rem;cursor:pointer;transition:opacity .2s ease-out,transform .15s ease-out}
-        .pro-cta:hover{opacity:.85}.pro-cta:active{transform:scale(.97)}
+
         .education{margin-bottom:20px}
         .education-title{font-family:var(--font-h);font-size:1.4rem;font-weight:700;text-align:center;margin-bottom:18px}
         .edu-grid{display:grid;gap:13px}
@@ -118,8 +109,7 @@
         .hero{animation:fadeUp .5s ease-out both}
         .pw-card{animation:fadeUp .5s ease-out .1s both}
         
-        .pro-upsell{animation:fadeUp .5s ease-out .22s both}
-        .education{animation:fadeUp .5s ease-out .26s both}
+        .education{animation:fadeUp .5s ease-out .22s both}
         @media(max-width:520px){.countdown-grid{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}.edu-card{padding:17px}}
     </style>
 </head>
@@ -218,24 +208,7 @@
     <p class="breach-disclaimer">Uses k-Anonymity — only the first 5 characters of your password SHA-1 hash are sent, keeping your full password private.</p>
 </div>
 
-<div class="pro-upsell">
-    <div class="pro-label">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        Pro
-    </div>
-    <h2>Real-Time Breach Monitoring</h2>
-    <p>Get notified the instant your password appears in a new data breach — before hackers can exploit it.</p>
-    <ul class="pro-features">
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Continuous monitoring across 15B+ breach records</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Instant email alerts when your password is found</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Dark web scanning for your email and passwords</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Unlimited breach checks plus family coverage</li>
-    </ul>
-    <button class="pro-cta">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        Upgrade to Pro
-    </button>
-</div>
+
 
 <div class="education">
     <h2 class="education-title">Learn About Password Security</h2>
