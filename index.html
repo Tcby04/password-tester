@@ -350,14 +350,24 @@
         var days = Math.floor((seconds % 2592000) / 86400);
         var hours = Math.floor((seconds % 86400) / 3600);
 
-        if (years > 1000000000) {
+        if (seconds < 1) {
+            // Instantly crackable
+            cuYears.parentElement.classList.remove('forever');
+            cuYears.style.color = 'var(--danger)';
+            cuYears.textContent = 'Instantly';
+            cuMonths.textContent = '—'; cuMonths.parentElement.classList.remove('forever');
+            cuDays.textContent = '—'; cuDays.parentElement.classList.remove('forever');
+            cuHours.textContent = '—'; cuHours.parentElement.classList.remove('forever');
+        } else if (years > 1000000000) {
             cuYears.parentElement.classList.add('forever');
+            cuYears.style.color = '';
             cuYears.textContent = '∞';
             cuMonths.textContent = '—'; cuMonths.parentElement.classList.remove('forever');
             cuDays.textContent = '—'; cuDays.parentElement.classList.remove('forever');
             cuHours.textContent = '—'; cuHours.parentElement.classList.remove('forever');
         } else {
             cuYears.parentElement.classList.remove('forever');
+            cuYears.style.color = '';
             cuYears.textContent = years > 0 ? formatNum(years) : '—';
             cuMonths.textContent = months > 0 ? formatNum(months) : '—';
             cuDays.textContent = days > 0 ? formatNum(days) : '—';
