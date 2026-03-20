@@ -79,9 +79,6 @@
         .breach-btn:hover{opacity:.85}.breach-btn:active{transform:scale(.97)}.breach-btn:disabled{opacity:.45;cursor:not-allowed}
         
         .breach-result.visible{display:flex}
-        .breach-result.clean{background:oklch(25% .08 145 / .2);border:1px solid oklch(40% .08 145);color:oklch(80% .07 145)}
-        .breach-result.danger{background:oklch(25% .12 25 / .2);border:1px solid oklch(40% .12 25);color:oklch(85% .09 25)}
-        .breach-result.error{background:var(--surface-raised);border:1px solid var(--border);color:var(--text-muted)}
         .breach-result svg{flex-shrink:0;margin-top:1px}
         
 
@@ -185,28 +182,6 @@
     </div>
 </div>
 
-<div class="breach-section">
-    <div class="breach-header">
-        <div class="breach-title">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            Breach Check
-        </div>
-        <span class="breach-badge">via HaveIBeenPwned</span>
-    </div>
-    <div class="breach-input-row">
-        <input type="text" id="breachInput" class="breach-input" placeholder="Enter password to check against breaches…">
-        <button type="button" class="breach-btn" id="breachBtn" onclick="checkBreach()">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            Check
-        </button>
-    </div>
-    <div class="breach-result" id="breachResult">
-        <svg id="breachIconClean" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polyline points="20 6 9 17 4 12"/></svg>
-        <svg id="breachIconDanger" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        <span id="breachResultText"></span>
-    </div>
-    <p class="breach-disclaimer">Uses k-Anonymity — only the first 5 characters of your password SHA-1 hash are sent, keeping your full password private.</p>
-</div>
 
 
 
@@ -258,7 +233,7 @@
     <div class="footer-links">
         <a href="https://tcby04.github.io/curtis-tech/" target="_blank">CurtisTech</a>
         <a href="https://github.com/Tcby04/password-tester" target="_blank">GitHub</a>
-        <a href="https://haveibeenpwned.com/" target="_blank">HIBP</a>
+        
     </div>
 </footer>
 
